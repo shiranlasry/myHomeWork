@@ -1,0 +1,23 @@
+@import 'mainStyle';
+
+// .content {
+//     width: 60%;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: column;
+//     gap: 20px;
+//     margin: 0 auto;
+// }
+
+#register-user-heder {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+}
+
+/* Style for the form container */

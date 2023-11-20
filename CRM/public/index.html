@@ -1,0 +1,32 @@
+<!-- index html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  type="text/css" rel="stylesheet" href="./dist/index.css">
+    <script src="./dist/index.js" defer></script>
+    <title>Index</title>
+</head>
+<body>
+   
+    <div class="wrapper">
+        <div id="index-heder" class="heder">
+            <div class="logo"></div>
+        </div>
+        <div class="content">
+            <form onsubmit="handleLogIn(event)">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <input type="submit" value="Submit"> 
+            </form> 
+        </div>
+  
+    <!-- locate to register page -->
+    <!-- <button onclick="window.location.href = './register.html';">Register</button> -->
+
+    </div>   
+</body>
+</html>

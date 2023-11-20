@@ -1,0 +1,311 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  min-height: 100vh;
+  height: auto;
+}
+body .heder {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+body .heder .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+body .heder .top .icons-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+body .heder .top .icons-container .personalInfoBtn:hover,
+body .heder .top .icons-container .logoutBtn:hover,
+body .heder .top .icons-container .homeBtn:hover,
+body .heder .top .icons-container .backBtn:hover {
+  background: linear-gradient(135deg, #e9ecee, #b80f96);
+}
+body .heder .top .icons-container .personalInfoBtn,
+body .heder .top .icons-container .logoutBtn,
+body .heder .top .icons-container .homeBtn,
+body .heder .top .icons-container .backBtn {
+  position: relative;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+body .heder .top .icons-container .personalInfoBtn::before,
+body .heder .top .icons-container .logoutBtn::before,
+body .heder .top .icons-container .backBtn:hover::before,
+body .heder .top .icons-container .homeBtn:hover::before {
+  position: absolute;
+  background-color: #333;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  font-size: 14px;
+  bottom: 110%;
+  /* Position the tooltip above the button */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  visibility: hidden;
+}
+body .heder .top .icons-container .homeBtn:hover::before {
+  content: "Home";
+  visibility: visible;
+  opacity: 1;
+}
+body .heder .top .icons-container .backBtn:hover::before {
+  content: "Back";
+  visibility: visible;
+  opacity: 1;
+}
+body .heder .top .icons-container .personalInfoBtn:hover:before {
+  content: "Personal Info";
+  visibility: visible;
+  opacity: 1;
+}
+body .heder .top .icons-container .logoutBtn:hover:before {
+  content: "Logout";
+  visibility: visible;
+  opacity: 1;
+}
+body .heder .top .logo {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+body .heder .top .logo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 10px;
+}
+body .heder .content {
+  width: 75%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 9px;
+}
+body h1,
+body h2,
+body p {
+  font-size: 26px;
+  font-weight: bold;
+  color: #3498db;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #0967a5, #047a35);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+body button,
+body input[type=submit] {
+  background: linear-gradient(135deg, #3498db, #2ecc71);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+body button:hover,
+body input[type=button]:hover,
+body input[type=submit]:hover {
+  background: linear-gradient(135deg, #e9ecee, #b80f96);
+}
+body input[type=checkBox]:hover {
+  cursor: pointer;
+}
+body input[type=text],
+body input[type=string],
+body select,
+body input[type=email],
+body input[type=password] {
+  width: 86%;
+  border: 2px solid #3498db;
+  border-radius: 6px;
+  font-size: 18px;
+  margin: 5px;
+}
+body form {
+  width: 65%;
+  margin: auto;
+  padding: 20px;
+  background-color: #012e34;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+body form .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+}
+body form label {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3498db;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(45deg, #0967a5, #047a35);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  width: fit-content;
+}
+body form input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+body form button,
+body form input[type=submit] {
+  width: 200px;
+  margin: auto;
+}
+body form select {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Style for tables */
+table {
+  min-width: 60%;
+  width: auto;
+  border-collapse: collapse;
+  margin: auto;
+  text-align: center;
+}
+
+/* Style for table headers */
+th {
+  background-color: #3498db;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Style for table rows */
+tr {
+  border: 1px solid #ccc;
+}
+
+/* Style for table data cells */
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Style for table row hover effect */
+tr:hover {
+  background-color: #f2f2f2;
+  cursor: pointer;
+}
+
+.bold-case {
+  font-weight: bold;
+  color: green;
+}
+
+.case-item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+/* Style for table responsive layout on smaller screens */
+@media screen and (max-width: 600px) {
+  table {
+    border: 1px solid #ccc;
+  }
+
+  th,
+td {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  th {
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+}
+/* Styling for the content container */
+.content {
+  background: linear-gradient(135deg, #6ea2c4, #6cc390);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Styling for the users list */
+.users_list,
+.user_update_details {
+  flex: 1;
+  padding: 20px;
+  background-color: #012e34;
+  border-radius: 8px;
+  margin-right: 20px;
+  font-size: 28px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.btnsContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(45deg, #0967a5, #047a35);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.bold-user {
+  font-weight: bold;
+  color: green;
+}

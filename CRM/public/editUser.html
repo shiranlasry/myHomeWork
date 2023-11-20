@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  type="text/css" rel="stylesheet" href="./dist/editUser.css">
+    <!-- <link rel="stylesheet" href="./dist/styleUpdatePage.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="./dist/editUser.js" defer></script>  
+    <title>Edit Users</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="register-user-heder" class="heder">
+            <div class="top">
+                <div class="logo">
+                    <img class="logoImg" src="./dist/images/crmLogo.jpeg" alt="logo">   
+                    <h1>Edit Users</h1>
+                </div>
+                <div class="icons-container">
+                    <button class="homeBtn" onclick="window.location.href = './CRM_homePage.html';">
+                        <i class="fas fa-home"></i> <!-- Font Awesome home icon -->
+                    </button>
+                    <button class="backBtn" onclick="window.location.href = './updateUsers.html';">
+                        <i class="fa-solid fa-hand-point-left"></i>
+                    </button>
+                </div>  
+            </div>
+        </div>
+              
+        <div class="content">
+            <div class="users_list">
+                <h2>Users List</h2> 
+                <input type="text" id="searchInput" placeholder="Search users...">
+                <div id="userList"></div> <!-- Placeholder for user list -->  
+            </div>
+            <div class="user_update_details">
+                <h2>User Details</h2>
+                <div id="userDetails"> </div> <!-- Placeholder for user details -->
+                
+                <div class="btnsContainer">
+                    <button id="deleteUserBtn" style="display: none;">Delete User</button>
+                    <button id="updateUserBtn" style="display: none;">Update details</button>
+                    <button id="updatePasswordBtn" style="display: none;">Update Password</button>
+                </div>
+                <div id="updatePaswordDiv"></div>
+            </div>
+    </div>
+</body>
+</html>

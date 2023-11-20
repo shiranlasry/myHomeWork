@@ -1,0 +1,180 @@
+/* CRM_homePage.css */
+@import 'styleUpdatePage';
+
+
+.content {
+    justify-content: center;
+
+    .admin-option {
+        display: flex;
+        width: 100%;
+        padding-bottom: 10px;
+
+        #updateUserDiv,
+        #updateDepartmentDiv {
+            width: fit-content;
+        }
+
+    }
+
+    .showCasesDiv {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+
+        .filersBtns {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 20px;
+        }
+
+        .casescontent {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 20px;
+            border: 1px solid black;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+        }
+
+        .btnsContainer {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+            margin: 10px;
+        }
+    }
+}
+
+.cases-content {
+    display: flex;
+    flex-direction: column; // Stack elements vertically
+
+    .casesAndDetail-div {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .header-case-details {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+        margin: 15px;
+
+        #showcomplainanDetailsBtn {
+            width: 75px;
+            height: 75px;
+            border: 1px solid rgb(34, 201, 248);
+        }
+    }
+
+    #cases-list,
+    #case-details,
+    #searchInputCase {
+        width: 44%;
+        border: 1px solid black;
+        padding: 10px;
+        margin: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    }
+
+    #caseDetailsForm {
+        width: 90%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+
+        .case-group {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            margin: auto;
+
+            input {
+                width: 65%;
+            }
+
+            #solution,
+            #description {
+                width: 82%;
+            }
+        }
+    }
+}
+
+#cases-list {
+    .case-item {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        text-align: left;
+        justify-content: space-evenly;
+        gap: 15px;
+        margin: 15px;
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+        div {
+            width: 30%;
+        }
+    }
+
+    .case-item:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+        color: green;
+        transform: scale(1.02);
+        background-color: rgb(207, 207, 207);
+    }
+}
+// displat complainan details pop up
+#complainanDetailsPopUpDiv{
+    position: fixed;
+    top: 40%;
+    left: 60%;
+    z-index: 100;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 15px;
+    padding: 15px;
+    background: linear-gradient(to right, #05023c, #87d3ef);
+   
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    .complainan-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 15px;
+        margin: 15px;
+
+        color : white;
+        font-size: 18px;
+    }
+    
+}

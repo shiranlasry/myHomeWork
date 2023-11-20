@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./dist/register.css"> -->
+    <link rel="stylesheet" href="./dist/styleUpdatePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <script src="./dist/register.js" defer></script>    
+    <title>Register</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div id="register-user-heder" class="heder">
+            <div class="top">
+                <div class="logo">
+                    <img class="logoImg" src="./dist/images/crmLogo.jpeg" alt="logo">   
+                    <h1>Register</h1>
+                </div>
+                <div class="icons-container">
+                    <button class="homeBtn" onclick="window.location.href = './CRM_homePage.html';">
+                        <i class="fas fa-home"></i> <!-- Font Awesome home icon -->
+                    </button>
+                    <button class="backBtn" onclick="window.location.href = './updateUsers.html';">
+                        <i class="fa-solid fa-hand-point-left"></i>
+                    </button>
+                </div>  
+            </div>
+        </div>
+                   <!-- register form -->
+        <div id="formDiv" >
+            <h2>add new user details</h2>
+            <form onsubmit="hundleRegister(event)">
+                <div class="form-group">
+                     <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div  class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                    <!-- <label for="password">Confirm Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required> -->
+                <div  class="form-group">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+                </div>
+                <div  class="form-group">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+                </div>
+                <div  class="form-group">
+                    <label for="phoneNum">Phone Number:</label>
+                    <input type="text" id="phoneNum" name="phoneNum" placeholder="Enter your phone number" required>
+                </div>
+                <!-- department checkbox -->
+                <div class="form-group">
+                    <label for="department">Department:</label>
+                    <select id="department-register" name="department" required>
+                        <option value="">Select a department</option>
+                    </select>
+                </div>
+                    <!-- check box is admin -->
+                <div  class="form-group">
+                    <label for="isAdmin">Is Admin:</label>
+                    <input type="checkbox" id="isAdmin" name="isAdmin" value="true">
+                </div>
+                <input type="submit" value="Submit"> 
+            </form>     
+        </div>
+    </div>
+</body>
+</html>

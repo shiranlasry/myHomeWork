@@ -1,0 +1,71 @@
+<!-- home page html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  type="text/css" rel="stylesheet" href="./dist/CRM_homePage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="./dist/CRM_homePage.js" defer></script>   
+    <title>Home Page - CRM</title>
+</head>
+<body>
+    <div id="complainanDetailsPopUpDiv" style="display: none;"></div>
+    <div class="wrapper">
+        <div id="main-header" class="heder">  
+            <div class="top">
+                <div class="logo">
+                    <img class="logoImg" src="./dist/images/crmLogo.jpeg" alt="logo">
+                    <h1>Welcom to CR(azy)M</h1> 
+                </div>
+                <div class="icons-container">
+                    <button class="logoutBtn" onclick="LogOut()"><i class="fa-solid     fa-door-open"></i>
+                    </button>
+                    <button class="personalInfoBtn" onclick="renderPersonalInfoPage()"><i class="fa-solid fa-user-injured"></i>
+                    </button>  
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="admin-option">
+                <div id="updateUserDiv"></div>
+                <div id="updateDepartmentDiv"></div>
+            </div>
+            <div class="user-option"></div> 
+            <div class="showCasesDiv">
+                <div class="filersBtns">
+                    <button class="allCasesBtn" onclick="renderAllCases()">All Cases</button>
+                    <button class="myCasesBtn" onclick="renderMyCases()">My Cases</button>
+                    <button class="addCaseBtn" onclick="renderAddNewCasePage()">Add New Case</button>
+                </div>
+                <div class="cases-content" id="cases-content">
+                    <input type="text" id="searchInputCase" placeholder="Search cases number...">
+                    <div class="casesAndDetail-div" >
+                        <div id="cases-list">
+                            <h2>Case List</h2>
+                            <div id="casesList"> </div>
+                        </div>
+                        <div id="case-details">
+                            <div class="header-case-details">
+                                <h2>Case Details</h2>
+                                <button id="showcomplainanDetailsBtn" style="display: none;">
+                                    <i class="fa-solid fa-phone"></i></button>
+                                  
+                            </div>
+                            
+                            <div id="caseDetails"> </div> <!-- Placeholder for user details -->
+                            
+                            <div class="btnsContainer">
+                                <button id="deleteCaseBtn" style="display: none;">Delete Case</button>
+                                <button id="updateCaseBtn" style="display: none;">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+@import 'styleUpdatePage';
+
+
+/* Styling for the content container */
+.content {
+  background: linear-gradient(135deg, #6ea2c4, #6cc390);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Styling for the users list */
+.users_list,
+.user_update_details {
+  flex: 1;
+  padding: 20px;
+  background-color: #012e34;
+  border-radius: 8px;
+  margin-right: 20px;
+  font-size: 28px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.btnsContainer {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 20px;
+}
+
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(45deg, #0967a5, #047a35);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.bold-user {
+  font-weight: bold;
+  color: green;
+}

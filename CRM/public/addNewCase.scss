@@ -1,0 +1,38 @@
+/* AddNewCase.css */
+@import 'styleUpdatePage';
+
+.wrapper {
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+
+
+        form {
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 95%;
+
+            .section {
+                display: flex;
+                flex-direction: column;
+                width: 40%;
+                justify-content: space-evenly;
+
+                .form-group {
+                    width: 50%;
+
+                    input {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+
+        #searchInputCase {
+            width: 50%;
+            margin: 0 auto;
+        }
+    }
+}
