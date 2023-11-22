@@ -80,7 +80,7 @@ function App() {
   return (
     <div className="App">
       <div className='productsList-container'>
-        <h1>My List</h1>
+        <h1>My List aaaaa</h1>
         <ul className='productsList'>
           {selectedProducts.map((product, index) => (
             <li key={product.id}>
