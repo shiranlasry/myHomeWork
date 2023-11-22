@@ -20,7 +20,7 @@ app.use(express.static("public"));
 //body
 app.use(express.json());
 
-const  MONGO_URI  = "mongodb+srv://liranav26:Vhksci30@cluster0.d5q6v4v.mongodb.net/CRM";
+const { MONGO_URI } = process.env;
 // for req loged in user detalis
 //connect to mongoDB with mongoose
 mongoose.connect(MONGO_URI)
