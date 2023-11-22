@@ -3,7 +3,7 @@ import Product from './components/Product/Product';
 import './App.scss';
 import { products as initialProducts } from './util/products';
 
-interface Product {
+interface Product_interface {
   id: number;
   name: string;
   imgSrc?: string;
@@ -13,11 +13,11 @@ interface Product {
 }
 
 function App() {
-  const [selectedProducts, setSelectedProducts] = useState<Product[]>([]);
-  const [products, setProducts] = useState<Product[]>(initialProducts);
+  const [selectedProducts, setSelectedProducts] = useState<Product_interface[]>([]);
+  const [products, setProducts] = useState<Product_interface[]>(initialProducts);
   const [searchTerm, setSearchTerm] = useState('');
   const [showAddProductForm, setShowAddProductForm] = useState(false);
-  const [newProduct, setNewProduct] = useState<Product>({
+  const [newProduct, setNewProduct] = useState<Product_interface>({
     id: 0,
     name: '',
     imgSrc: '',
@@ -28,7 +28,7 @@ function App() {
   const filteredProducts = products.filter((product) =>
   product.name.toLowerCase().includes(searchTerm.toLowerCase())
 );
-  const addToProductList = (product: Product) => {
+  const addToProductList = (product: Product_interface) => {
     //check if product is already in the list
     const productExists = selectedProducts.find((p) => p.id === product.id);
     if (productExists) {
