@@ -1,0 +1,32 @@
+.userCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 270px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+    transition: all 0.3s ease-in-out;
+    
+    &:hover{
+        transform: scale(1.1);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    }
+    .userCard__name{
+        font-size: 10px;
+        font-weight: bold;
+    }
+    .userCard__lastName{
+        font-weight: bold;
+        font-size: 10px;
+      
+    }
+    .userCard__btn{
+        width: 100%;
+        margin-top: 10px;
+
+    }
+}
