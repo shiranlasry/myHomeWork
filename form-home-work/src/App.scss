@@ -1,0 +1,15 @@
+#root{
+  width: 100%;
+  height: 100%;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 950px;
+  height: 550px;
+  background-image: url('https://img.freepik.com/free-vector/blue-background-with-many-water-soap-bubbles_1017-19630.jpg?size=626&ext=jpg&uid=R96966099&ga=GA1.1.9697832.1687471476&semt=ais');
+  background-size: cover;
+  margin: auto;
+}
