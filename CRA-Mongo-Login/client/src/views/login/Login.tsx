@@ -1,12 +1,15 @@
 
 import { useState } from "react";
-import axios from 'axios';
+
 import { NavLink } from "react-router-dom";
 import './login.scss'
 import { logIn } from "../../api/usersApi";
+import { useAuth } from "../../context/userContext";
 
 const Login = () => {
-const [user, setUser] = useState({email: '', password: ''});
+  const { login } = useAuth();
+
+
 const handelLogin = async (e: any) => {
   e.preventDefault();
   try {
@@ -16,7 +19,8 @@ const handelLogin = async (e: any) => {
     const data = await logIn(email,password);
     console.log(data);
     if (data) {
-      setUser({email,password})
+      const loggedInUser = { email: data.email }; // Replace with actual user data
+      login(loggedInUser);
       alert('Login success');
       
 
