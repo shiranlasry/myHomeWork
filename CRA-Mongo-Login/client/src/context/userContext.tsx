@@ -1,35 +1,32 @@
-import { createContext, useContext, ReactNode, useState } from 'react';
 
-interface AuthContextProps {
-  user: User | null;
-  login: (user: User) => void;
-  logout: () => void;
-}
+//userContext.tsx 
 
-const AuthContext = createContext<AuthContextProps | undefined>(undefined);
+import { createContext, useContext, useState } from "react";
 
-export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [user, setUser] = useState<User | null>(null);
 
-  const login = (loggedInUser: User) => {
-    setUser(loggedInUser);
-  };
-
-  const logout = () => {
-    setUser(null);
-  };
-
-  return (
-    <AuthContext.Provider value={{ user, login, logout }}>
-      {children}
-    </AuthContext.Provider>
-  );
-};
-
-export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error('useAuth must be used within an AuthProvider');
+interface UserContextProps {
+    children: React.ReactNode;
   }
-  return context;
-};
+
+  interface UserContextType {
+    user: User | null;
+    setUser: React.Dispatch<React.SetStateAction<User | null>>;
+  }
+  const UserContext = createContext<UserContextType | undefined>(undefined);
+const UserProvider: React.FC<UserContextProps> = ({ children }) => {
+    const [user, setUser] = useState<User | null>(null);
+  
+    return (
+      <UserContext.Provider value={{ user, setUser }}>{children}</UserContext.Provider>
+    );
+  };
+
+  const useUser = () => {
+    const context = useContext(UserContext);
+    if (!context) {
+      throw new Error("useUser must be used within a UserProvider");
+    }
+    return context;
+  };
+  
+  export { UserProvider, useUser };

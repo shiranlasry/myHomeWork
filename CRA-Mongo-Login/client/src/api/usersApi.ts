@@ -17,7 +17,6 @@ export const singUp = async (user: User) => {
 
 export const logIn = async (email: string , password:string) => {
     try {
-        debugger;
         const response = await fetch("API/users/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },

@@ -9,11 +9,8 @@ export async function register(req: express.Request, res: express.Response) {
     try {
         const { email, username, password, password2,city,street,houseNumber,apartmentNumber} = req.body;
 
-        if (!email || !username || !password || !password2) throw new Error("Couldn't get all fields from req.body");
+        if (!email || !username || !password || !password2 || !city|| !street || !houseNumber|| !apartmentNumber) throw new Error("Couldn't get all fields from req.body");
 
-        console.log(email, username, password, password2,city,street,houseNumber,apartmentNumber);
-        
-  
         const { error } = UserValidation.validate({ email, username, password, password2 , city, street, houseNumber, apartmentNumber});
         if (error) throw error;
   
