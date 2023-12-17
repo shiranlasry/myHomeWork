@@ -9,3 +9,6 @@ interface User{
     houseNumber: number,
    
 }
+interface Category{
+    CategoryName: string,  
+}

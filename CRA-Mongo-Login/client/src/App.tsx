@@ -7,6 +7,7 @@ import Page404 from "./views/Page404";
 import SingUp from "./views/singUp/SingUp";
 import HomePage from "./views/homepage/HomePage";
 import { UserProvider } from "./context/userContext";
+import Categories from "./components/categories/Categories";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/singup" element={<SingUp />} />
         <Route path="/homepage" element={<HomePage />} />
+        <Route path="/categories" element={<Categories />} />
       </Routes>
     </UserProvider>
   );

@@ -27,6 +27,9 @@ app.use(express.json());
 import usersRoutes from "./API/users/usersRoutes";
 app.use("/API/users", usersRoutes);
 
+import categoriesRoutes from "./API/categories/categoriesRoutes";
+app.use("/API/categories", categoriesRoutes); 
+
 app.listen(PORT, () => {
   console.log(`server is active on port : ${PORT}`);
 });
